@@ -1,9 +1,10 @@
 import * as cdk from '@aws-cdk/core';
+import { Example } from "./lambda";
 
 export class ExampleProjectStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-    // The code that defines your stack goes here
+    const lambda = new Example(this, `${id}-lambda`);
   }
 }
