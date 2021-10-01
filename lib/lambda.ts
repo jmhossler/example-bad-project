@@ -8,6 +8,7 @@ export class Example extends cdk.Construct {
     constructor(scope: cdk.Construct, id: string) {
         super(scope, id);
 
+        // Adding a random comment
         this.handler = new pythonLambda.PythonFunction(this, `${id}`, {
             functionName: `${id}`,
             timeout: cdk.Duration.seconds(10),
